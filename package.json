@@ -2,12 +2,15 @@
   "name": "wedding-invitation",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://github.com/nithinmk26/e-Invitation",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "react": "^18.2.0",
