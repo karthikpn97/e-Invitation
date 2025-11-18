@@ -54,24 +54,32 @@ Replace URLs in `src/components/Collage.jsx` with your own image links (preferab
 Modify palette in `src/styles/global.css` under `:root`.
 
 ## 🚀 Deploy to GitHub Pages
-1. Create a GitHub repository (e.g., `wedding-invitation`).
-2. Update `vite.config.js` base:
+1. Create a GitHub repository (this repo is named `e-Invitation`).
+2. Ensure `vite.config.js` has the correct `base` option for GitHub Pages:
 ```js
-base: '/wedding-invitation/'
+// for repository named `e-Invitation`
+base: '/e-Invitation/'
 ```
-3. Commit & push everything.
-4. Run:
+3. Commit & push everything to `main`.
+4. Publish with the included script (this uses the `gh-pages` package):
 ```bash
+npm install
 npm run deploy
 ```
-This builds production files (`dist`) and publishes to `gh-pages` branch.
-5. Enable GitHub Pages: Settings → Pages → Branch: `gh-pages` → Save.
-6. Visit: `https://<username>.github.io/wedding-invitation/`
+This will build the site and push the `dist` directory to the `gh-pages` branch.
+5. In the repository Settings → Pages, ensure the Source is set to branch `gh-pages` (root) and save.
+6. Visit: `https://<username>.github.io/e-Invitation/`
 
 ### Redeploy after edits
 ```bash
 npm run deploy
 ```
+
+### Troubleshooting: blank white page after deployment
+- Most blank pages are caused by incorrect `base` settings in `vite.config.js`. The built HTML must reference assets using the repo subpath (e.g. `/e-Invitation/`).
+- Confirm the built `dist/index.html` contains script/style links starting with `/e-Invitation/`.
+- If using a custom domain or serving from root, set `base: '/'` and redeploy.
+
 
 ## 🛠 Optional Improvements
 - Add RSVP form (Netlify / Formspree).
