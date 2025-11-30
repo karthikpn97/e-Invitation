@@ -7,7 +7,7 @@ export const INVITE = {
   receptionDate: 'February 14, 2026',
   receptionTime: '7 PM',
   muhurthaDate: 'February 15, 2026',
-  muhurthaTime: '10:15 to 11:20 AM',
+  muhurthaTime: '10:17 to 11:20 AM',
   venue: 'Patre K. Channaveerapayya Kalyana Mantapa',
   shortMessage: 'With joyful hearts we invite you to share in our wedding celebration and bless our union.',
   addressLines: [
